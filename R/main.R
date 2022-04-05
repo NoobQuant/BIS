@@ -52,8 +52,8 @@ read_bis_long <- function(path, skip, na.drop = TRUE) {
 
 read_bis <- function(path) {
   skip <- nskips(path)
-  try(return(read_bis_wide(path, skip)), TRUE)
-  try(return(read_bis_long(path, skip)), TRUE)
+  try(return(read_bis_wide(path, skip, FALSE)), TRUE)
+  try(return(read_bis_long(path, skip, FALSE)), TRUE)
 }
 
 #' Download data frame of available BIS data sets
